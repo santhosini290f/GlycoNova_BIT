@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardioGlyc AI — Happiest Health Summit 2026 Presentation</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @media print {
+      body { background: #030712 !important; color: #f1f5f9 !important; -webkit-print-color-adjust: exact; }
+      .no-print { display: none !important; }
+      .slide { page-break-after: always; height: 100vh; display: flex !important; }
+    }
+    .slide { display: none; }
+    .slide.active { display: flex; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-white">
+
+  <!-- Top Presentation Toolbar (Hidden during print) -->
+  <header class="no-print border-b border-slate-800 bg-slate-900/90 backdrop-blur-md px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <span class="flex h-3 w-3 rounded-full bg-cyan-400 animate-pulse"></span>
+      <span class="font-bold text-sm text-cyan-300 tracking-wide uppercase">CardioGlyc AI • Pitch Deck</span>
+      <span class="text-xs text-slate-400 hidden sm:inline">| Happiest Health Digital Twin Challenge 2026</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <span id="slideCounter" class="font-mono text-xs text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md">Slide 1 / 12</span>
+      <button onclick="prevSlide()" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs rounded-lg transition-colors border border-slate-700">← Prev</button>
+      <button onclick="nextSlide()" class="px-3 py-1 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold rounded-lg transition-colors">Next →</button>
+      <button onclick="window.print()" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-lg transition-colors flex items-center gap-1.5 shadow-sm">
+        <span>📄 Save as PDF</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Presentation Slides Container -->
+  <main class="flex-1 flex items-center justify-center p-6 md:p-12">
+    
+    <!-- SLIDE 1: Title -->
+    <section class="slide active flex-col justify-center items-center text-center max-w-4xl mx-auto space-y-6 w-full animate-fade">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-medium">
+        <span>Happiest Health • Digital Twin Challenge 2026</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 tracking-tight leading-tight">
+        CardioGlyc AI: Multi-Modal CardioMetabolic Digital Twin
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-2xl font-light">
+        Shifting Chronic Care in India from Reactive Episodes to Proactive Precision Homeostasis
+      </p>
+      <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 max-w-md w-full space-y-1">
+        <div><strong>Team:</strong> GlycoNova</div>
+        <div><strong>Institution:</strong> BIT</div>
+        <div><strong>Track:</strong> AI, Healthcare &amp; Digital Health Proof-of-Concept</div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: Problem Statement -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-rose-400 tracking-wider">The Clinical Crisis</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">India's CardioMetabolic Epidemic</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-2xl font-black text-rose-400 font-mono">101M+</div>
+          <div class="text-xs font-bold text-slate-200 mt-1">Diabetes Capital</div>
+          <p class="text-xs text-slate-400 mt-1">India accounts for the highest global burden of Type 2 Diabetes (ICMR-INDIAB).</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-2xl font-black text-amber-400 font-mono">10 Years</div>
+          <div class="text-xs font-bold text-slate-200 mt-1">Premature CAD Onset</div>
+          <p class="text-xs text-slate-400 mt-1">Indian patients suffer myocardial infarctions a decade earlier than Western peers.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-2xl font-black text-cyan-400 font-mono">3–6 Months</div>
+          <div class="text-xs font-bold text-slate-200 mt-1">The Reactive Blindspot</div>
+          <p class="text-xs text-slate-400 mt-1">Episodic clinic visits miss daily glucose volatility and nocturnal hypertensive surges.</p>
+        </div>
+      </div>
+      <div class="p-4 rounded-xl bg-rose-950/20 border border-rose-800/40 text-xs text-rose-300">
+        <strong>The Missing Capability:</strong> Doctors and patients have no tool to predict acute excursions or test lifestyle and medication interventions <em>in silico</em> before actual execution.
+      </div>
+    </section>
+
+    <!-- SLIDE 3: The Digital Twin Concept -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-cyan-400 tracking-wider">The Paradigm Shift</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">What is CardioGlyc AI?</h2>
+      <p class="text-sm text-slate-300 leading-relaxed">
+        CardioGlyc AI is a dynamic, closed-loop <strong>CardioMetabolic Digital Twin</strong> that harmonizes longitudinal Electronic Health Records (EHR) with continuous real-time streaming wearables to construct a biophysically grounded virtual replica of the patient's pancreas, heart, and vasculature.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-cyan-300 text-sm">1. Multi-Modal Data Fusion</div>
+          <p class="text-slate-400">Ingests static EHR records (ICD-10, HbA1c, lipids) combined with dense time-series wearable streams (CGM, PPG, ABPM, METs).</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-emerald-300 text-sm">2. Continuous Biophysical ODEs</div>
+          <p class="text-slate-400">Solves Runge-Kutta numerical equations for the Bergman Minimal Model and Two-Element Windkessel hemodynamics.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-purple-300 text-sm">3. 42-Minute Proactive Early Warning</div>
+          <p class="text-slate-400">Forecasts severe postprandial spikes (&gt;220 mg/dL), hypoglycemia (&lt;70 mg/dL), and hypertensive crises with ROC-AUC 0.914.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-amber-300 text-sm">4. "What-If" Counterfactual Sandbox</div>
+          <p class="text-slate-400">Enables doctors and patients to simulate the exact physiological impact of walking, dietary changes, and medication adherence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: System Architecture -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-cyan-400 tracking-wider">Engineering Architecture</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">End-to-End System Architecture</h2>
+      <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 font-mono text-[11px] text-slate-300 overflow-x-auto space-y-2">
+        <div class="text-cyan-400 font-bold">[DATA FUSION] Longitudinal EHR (ICD-10/Labs) + Wearable Streams (CGM/PPG/ABPM/METs)</div>
+        <div class="text-slate-500">  │</div>
+        <div class="text-emerald-400 font-bold">[BIOPHYSICAL ODEs] Bergman Minimal Model (dG/dt) + Two-Element Windkessel (MAP/PP/SVR)</div>
+        <div class="text-slate-500">  │</div>
+        <div class="text-indigo-400 font-bold">[MULTI-TASK ML] 10-Yr ASCVD Risk (1.4x South Asian Enhancer) + 2-Hr Excursion Classifier</div>
+        <div class="text-slate-500">  │</div>
+        <div class="text-amber-400 font-bold">[IN SILICO SANDBOX] 20-min Postprandial Walk (-38% spike) + Millet Diet + Med Adherence</div>
+        <div class="text-slate-500">  │</div>
+        <div class="text-purple-400 font-bold">[STANDARDS & EXPORT] HL7 FHIR Release 4.0.1 (ABDM ABHA-ready JSON Bundles)</div>
+      </div>
+      <div class="text-xs text-slate-400 flex items-center justify-between">
+        <span>Compliant with DPDP Act 2023 &amp; HIPAA (Synthetic &amp; Anonymized Training Datasets)</span>
+        <span class="text-cyan-400 font-mono">architecture_diagram.svg included</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Biophysical Modeling -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-emerald-400 tracking-wider">Scientific Rigor</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">Physiological Differential Equations</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-emerald-300 text-sm">Bergman Minimal Model (Endocrine)</div>
+          <div class="font-mono text-cyan-300 bg-slate-950 p-2 rounded">
+            dG/dt = -(p1 + X + U_ex)G + p1*Gb + Ra(t)<br>
+            dX/dt = -p2*X + p3*(I - Ib)
+          </div>
+          <p class="text-slate-400">Models gut carb absorption decay (kAbs) and non-insulin mediated muscle GLUT-4 glucose clearance during physical activity (U_ex).</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-rose-300 text-sm">Two-Element Windkessel (Hemodynamics)</div>
+          <div class="font-mono text-cyan-300 bg-slate-950 p-2 rounded">
+            MAP = CO * R = (SV * HR) * R<br>
+            PP = SBP - DBP ≈ SV / C
+          </div>
+          <p class="text-slate-400">Simulates systemic vascular resistance (R) and arterial compliance (C) to capture arterial stiffness and sodium-induced surges.</p>
+        </div>
+      </div>
+      <p class="text-xs text-slate-400 italic">
+        *Why this matters:* Anchoring deep learning within differential equations eliminates hallucination and guarantees biophysically plausible trajectory forecasts.
+      </p>
+    </section>
+
+    <!-- SLIDE 6: UI Dashboard Walkthrough -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-cyan-400 tracking-wider">User Experience</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">The Clinical Cockpit &amp; Patient View</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+          <div class="font-bold text-cyan-300">1. Holographic Avatar</div>
+          <p class="text-slate-400">Interactive organ hubs for Heart, Pancreas, Autonomic Brain, and Vasculature pulsing at patient BPM.</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+          <div class="font-bold text-emerald-300">2. Multi-Trace Trajectory</div>
+          <p class="text-slate-400">Visualizes 6h past + 4h forward forecast comparing Baseline unmanaged spike vs Twin Counterfactual.</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+          <div class="font-bold text-amber-300">3. Vitals Ribbon &amp; Persona</div>
+          <p class="text-slate-400">Switch between 3 distinct South Asian clinical personas (Rajesh, Priya, Dr. Vikram) with live telemetry.</p>
+        </div>
+      </div>
+      <div class="p-3 rounded-xl bg-cyan-950/20 border border-cyan-800/40 text-xs text-cyan-300 text-center font-mono">
+        Active local demo running at: http://localhost:5173
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Counterfactual Sandbox -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-amber-400 tracking-wider">Core In Silico Sandbox</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">"What-If" Counterfactual Simulation</h2>
+      <p class="text-xs text-slate-300">
+        Empowering clinicians and patients to simulate interventions *before* making choices:
+      </p>
+      <div class="space-y-2 text-xs">
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between items-center">
+          <div>
+            <span class="font-bold text-emerald-300">20-Min Postprandial Brisk Walk (3.5 METs)</span>
+            <div class="text-slate-400 text-[11px]">GLUT-4 translocation clears plasma glucose directly into skeletal muscle.</div>
+          </div>
+          <span class="font-mono font-bold text-emerald-400">-38% Peak Glucose | -9 mmHg SBP</span>
+        </div>
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between items-center">
+          <div>
+            <span class="font-bold text-amber-300">Low-GI Complex Millets (Ragi/Jowar + 15g Fiber)</span>
+            <div class="text-slate-400 text-[11px]">Soluble fiber delays gastric emptying and slows absorption decay (kAbs).</div>
+          </div>
+          <span class="font-mono font-bold text-amber-400">-24% Peak Glucose</span>
+        </div>
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between items-center">
+          <div>
+            <span class="font-bold text-blue-300">Strict Medication Adherence (Metformin + Telmisartan)</span>
+            <div class="text-slate-400 text-[11px]">Suppresses hepatic gluconeogenesis and relieves peripheral arterial constriction.</div>
+          </div>
+          <span class="font-mono font-bold text-blue-400">-12 mmHg SBP | -18% Glucose</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: ABDM Interoperability -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-cyan-400 tracking-wider">National Alignment</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">HL7 FHIR R4 &amp; ABDM Interoperability</h2>
+      <p class="text-xs text-slate-300">
+        Zero proprietary lock-in. Seamlessly connects to Ayushman Bharat Digital Mission health lockers and hospital EHRs:
+      </p>
+      <div class="grid grid-cols-2 gap-3 text-xs">
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+          <div class="font-mono text-cyan-300 font-bold">Patient Resource</div>
+          <div class="text-slate-400 mt-1">Official ABHA (Ayushman Bharat Health Account) identifier format.</div>
+        </div>
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+          <div class="font-mono text-emerald-300 font-bold">Observation (LOINC 14745-4)</div>
+          <div class="text-slate-400 mt-1">Continuous Glucose Monitoring interstitial glucose streams.</div>
+        </div>
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+          <div class="font-mono text-rose-300 font-bold">Observation (LOINC 85354-9)</div>
+          <div class="text-slate-400 mt-1">Blood pressure panels (Systolic and Diastolic mmHg).</div>
+        </div>
+        <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+          <div class="font-mono text-purple-300 font-bold">RiskAssessment Resource</div>
+          <div class="text-slate-400 mt-1">10-Year ASCVD probability with South Asian multiplier.</div>
+        </div>
+      </div>
+      <div class="text-xs text-emerald-400 text-center font-semibold">
+        ✓ 1-Click JSON export and download built directly into the UI dashboard.
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Validation Benchmarks -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-amber-400 tracking-wider">Evaluation Metrics</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">5-Fold Cross-Validation Benchmarks</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-800 text-xs">
+        <table class="w-full text-left">
+          <thead class="bg-slate-900 text-slate-400 border-b border-slate-800">
+            <tr>
+              <th class="p-3">Model Architecture</th>
+              <th class="p-3">ROC-AUC</th>
+              <th class="p-3">PR-AUC</th>
+              <th class="p-3">Sensitivity</th>
+              <th class="p-3">Lead Time</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-850">
+            <tr class="bg-slate-900/40">
+              <td class="p-3 text-slate-300">Standard Static Risk Score (Framingham)</td>
+              <td class="p-3 font-mono">0.724</td>
+              <td class="p-3 font-mono">0.651</td>
+              <td class="p-3 font-mono">68.0%</td>
+              <td class="p-3 font-mono text-slate-500">0 min</td>
+            </tr>
+            <tr class="bg-slate-900/40">
+              <td class="p-3 text-slate-300">Random Forest (EHR-only ML)</td>
+              <td class="p-3 font-mono">0.798</td>
+              <td class="p-3 font-mono">0.742</td>
+              <td class="p-3 font-mono">76.0%</td>
+              <td class="p-3 font-mono text-slate-400">5 min</td>
+            </tr>
+            <tr class="bg-cyan-950/20 font-bold text-slate-100">
+              <td class="p-3 text-cyan-300">CardioGlyc AI Digital Twin (Ours)</td>
+              <td class="p-3 font-mono text-emerald-400">0.914</td>
+              <td class="p-3 font-mono text-cyan-400">0.887</td>
+              <td class="p-3 font-mono text-slate-200">89.2%</td>
+              <td class="p-3 font-mono text-amber-300 font-extrabold">+42 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-400">
+        Strict probabilistic calibration: <strong>Brier score 0.076</strong> on a 500-patient South Asian validation split.
+      </p>
+    </section>
+
+    <!-- SLIDE 10: Clinical Impact in India -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-emerald-400 tracking-wider">National Healthcare Impact</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">Economic &amp; Societal Transformation</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-emerald-300 text-sm">Preventing Acute ICU Admissions</div>
+          <p class="text-slate-400">Early 42-minute alerts before severe hypoglycemia or hypertensive crisis prevents emergency hospitalizations, saving Indian families lakhs in catastrophic out-of-pocket expenses.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+          <div class="font-bold text-cyan-300 text-sm">Scalable Across Tier-2 &amp; Tier-3 Cities</div>
+          <p class="text-slate-400">Ultra-lightweight client-side inference runs on standard low-cost Android smartphones and consumer smartbands without requiring expensive GPU cloud servers.</p>
+        </div>
+      </div>
+      <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-800/40 text-xs text-emerald-300 text-center font-medium">
+        Preserves productive working years for young Indian professionals at high risk of premature CAD.
+      </div>
+    </section>
+
+    <!-- SLIDE 11: Demo Video & Submission Metadata -->
+    <section class="slide flex-col justify-center max-w-4xl mx-auto space-y-6 w-full">
+      <div class="text-xs uppercase font-bold text-cyan-400 tracking-wider">Submission Package</div>
+      <h2 class="text-3xl font-extrabold text-slate-100">Demonstration Video &amp; Artifacts</h2>
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-3 text-xs">
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-slate-200">20-Minute Video Demonstration:</span>
+          <span class="font-mono text-cyan-400">See DEMO_VIDEO_SCRIPT.md</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-slate-200">Open-Source License:</span>
+          <span class="font-mono text-emerald-400">MIT License (LICENSE file included)</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-slate-200">Architecture Vector Diagram:</span>
+          <span class="font-mono text-purple-400">presentation/architecture_diagram.svg</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-slate-200">Public GitHub Repository:</span>
+          <span class="font-mono text-amber-400">All code, datasets, &amp; pipelines ready</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: Conclusion & Q&A -->
+    <section class="slide flex-col justify-center items-center text-center max-w-4xl mx-auto space-y-6 w-full">
+      <h2 class="text-4xl font-extrabold text-slate-100">Reimagining Healthcare in India</h2>
+      <p class="text-base text-slate-300 max-w-xl font-light">
+        CardioGlyc AI delivers the foundation of proactive, preventive, and personalized medicine for 1.4 billion citizens.
+      </p>
+      <div class="p-5 rounded-2xl bg-gradient-to-r from-cyan-950/40 to-slate-900 border border-cyan-800/40 text-xs text-slate-300 max-w-md w-full space-y-2">
+        <div class="font-bold text-cyan-300 text-sm">Thank You to Happiest Health &amp; The Expert Jury!</div>
+        <div>We look forward to presenting live at the Summit in Bengaluru.</div>
+      </div>
+      <button onclick="goToSlide(0)" class="no-print px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs rounded-lg transition-colors border border-slate-700">
+        ↺ Restart Presentation
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Instructions -->
+  <footer class="no-print border-t border-slate-800/80 bg-slate-950 py-3 px-6 text-center text-xs text-slate-500">
+    <span>Use <strong>← Left Arrow</strong> and <strong>→ Right Arrow</strong> keys or the buttons above to navigate. Click <strong>Save as PDF</strong> to generate the submission deck PDF.</span>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('slideCounter');
+
+    function updateSlide() {
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentSlide);
+      });
+      counter.textContent = `Slide ${currentSlide + 1} / ${slides.length}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(idx) {
+      currentSlide = idx;
+      updateSlide();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>

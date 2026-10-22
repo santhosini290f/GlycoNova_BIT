@@ -1,0 +1,11 @@
+patient_id,name,age,gender,ethnicity,city,bmi,smoking_status,family_history_cvd,family_history_diabetes,hba1c,fasting_plasma_glucose,postprandial_glucose,systolic_bp,diastolic_bp,total_cholesterol,ldl_cholesterol,hdl_cholesterol,triglycerides,egfr,hs_crp,on_metformin,on_sglt2i,on_statin,on_antihypertensive,ground_truth_ascvd_event_10yr
+PT-IN-2026-001,Rajesh Sharma,52,Male,South Asian,Bengaluru,28.6,Former,True,True,8.4,158,234,142,88,218,138,38,242,82,3.4,1,0,1,1,1
+PT-IN-2026-002,Priya Venkataraman,46,Female,South Asian,Chennai,26.6,Never,False,True,6.2,114,162,126,82,194,112,46,168,98,1.8,1,0,0,0,0
+PT-IN-2026-003,Vikram Malhotra,63,Male,South Asian,New Delhi,26.1,Former,True,True,6.9,122,154,124,76,132,58,44,128,68,1.2,1,1,1,1,1
+PT-IN-2026-004,Ananya Nair,38,Female,South Asian,Kochi,24.8,Never,False,True,7.4,136,198,118,76,182,106,48,154,104,1.4,1,0,0,0,0
+PT-IN-2026-005,Suresh Patel,57,Male,South Asian,Ahmedabad,29.2,Current,True,True,9.1,178,268,152,94,236,152,34,260,74,4.2,1,1,1,1,1
+PT-IN-2026-006,Sunita Iyer,51,Female,South Asian,Mumbai,27.1,Never,True,False,6.8,128,172,134,84,204,122,42,192,86,2.1,1,0,1,1,0
+PT-IN-2026-007,Arun Reddy,49,Male,South Asian,Hyderabad,28.0,Never,True,True,8.0,150,220,138,86,210,130,36,230,88,2.8,1,0,1,1,1
+PT-IN-2026-008,Deepa Mukherjee,44,Female,South Asian,Kolkata,25.4,Never,False,True,5.9,106,148,122,78,176,98,48,142,96,1.2,0,0,0,0,0
+PT-IN-2026-009,Manoj Deshmukh,59,Male,South Asian,Pune,27.8,Former,True,True,8.7,166,248,146,90,224,144,35,248,76,3.6,1,1,1,1,1
+PT-IN-2026-010,Kavita Gupta,54,Female,South Asian,Bengaluru,28.4,Never,False,True,7.2,132,184,130,82,198,118,40,188,84,2.0,1,0,1,1,0

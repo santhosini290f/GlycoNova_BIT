@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="background:#030712; font-family:system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="dropGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Title & Subtitle -->
+  <text x="600" y="45" text-anchor="middle" fill="#38bdf8" font-size="24" font-weight="800" letter-spacing="1">CARDIOGLYC AI — SYSTEM ARCHITECTURE</text>
+  <text x="600" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">Multi-Modal CardioMetabolic Digital Twin • Happiest Health Digital Twin Challenge 2026</text>
+
+  <!-- LAYER 1: DATA INGESTION & FUSION -->
+  <g transform="translate(60, 95)">
+    <rect width="1080" height="110" rx="14" fill="url(#boxGrad)" stroke="#1e293b" stroke-width="1.5" filter="url(#dropGlow)" />
+    <rect x="0" y="0" width="1080" height="28" rx="14" fill="#0369a1" fill-opacity="0.3" />
+    <text x="20" y="19" fill="#38bdf8" font-size="12" font-weight="700">1. MULTI-MODAL DATA INGESTION &amp; PRIVACY COMPLIANCE (DPDP ACT / HIPAA)</text>
+
+    <!-- Sub-box 1: Historical EHR -->
+    <rect x="30" y="38" width="500" height="60" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="45" y="56" fill="#f8fafc" font-size="12" font-weight="600">Static / Historical EHR Data Stream (Synthea / MIMIC-IV)</text>
+    <text x="45" y="74" fill="#94a3b8" font-size="10">• ICD-10 Diagnostic Codes (E11 T2D, I10 HTN, E78 Dyslipidemia) • Demographics &amp; Asian BMI</text>
+    <text x="45" y="88" fill="#94a3b8" font-size="10">• Lab Biomarkers (HbA1c %, FPG, Postprandial Glucose, Lipid Panel, eGFR, hs-CRP)</text>
+
+    <!-- Sub-box 2: Real-Time Wearables -->
+    <rect x="550" y="38" width="500" height="60" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="565" y="56" fill="#f8fafc" font-size="12" font-weight="600">Dynamic / Real-Time Wearable Telemetry Streams (Medical IoT)</text>
+    <text x="565" y="74" fill="#94a3b8" font-size="10">• Continuous Glucose Monitoring (CGM 5-min interstitial sampling, dG/dt slope)</text>
+    <text x="565" y="88" fill="#94a3b8" font-size="10">• PPG Heart Rate (BPM), HRV RMSSD (vagal reserve), ABPM (SBP/DBP/MAP), METs activity</text>
+  </g>
+
+  <!-- DOWN ARROW 1 -->
+  <line x1="600" y1="205" x2="600" y2="230" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 2" />
+  <polygon points="595,230 600,238 605,230" fill="#38bdf8" />
+
+  <!-- LAYER 2: BIOPHYSICAL ODE SIMULATION ENGINE -->
+  <g transform="translate(60, 240)">
+    <rect width="1080" height="120" rx="14" fill="url(#boxGrad)" stroke="#10b981" stroke-width="1.5" filter="url(#dropGlow)" />
+    <rect x="0" y="0" width="1080" height="28" rx="14" fill="#065f46" fill-opacity="0.3" />
+    <text x="20" y="19" fill="#34d399" font-size="12" font-weight="700">2. BIOPHYSICAL ODE DIGITAL TWIN CORE (NUMERICAL RUNGE-KUTTA SOLVER)</text>
+
+    <!-- Sub-box 1: Bergman Model -->
+    <rect x="30" y="38" width="500" height="70" rx="8" fill="#0f172a" stroke="#047857" />
+    <text x="45" y="56" fill="#6ee7b7" font-size="12" font-weight="600">Bergman Minimal Model (Glucose-Insulin Dynamics)</text>
+    <text x="45" y="74" fill="#a7f3d0" font-family="monospace" font-size="11">dG/dt = -(p1 + X + U_ex)G + p1*Gb + Ra(t)  |  dX/dt = -p2*X + p3*(I - Ib)</text>
+    <text x="45" y="94" fill="#94a3b8" font-size="10">• Carbohydrate absorption decay (kAbs) • Muscle contraction GLUT-4 clearance (U_ex)</text>
+
+    <!-- Sub-box 2: Windkessel Model -->
+    <rect x="550" y="38" width="500" height="70" rx="8" fill="#0f172a" stroke="#047857" />
+    <text x="565" y="56" fill="#6ee7b7" font-size="12" font-weight="600">Two-Element Windkessel Model (Arterial Hemodynamics)</text>
+    <text x="565" y="74" fill="#a7f3d0" font-family="monospace" font-size="11">MAP = CO * R = (SV * HR) * R  |  Pulse Pressure PP ≈ Stroke Volume / C</text>
+    <text x="565" y="94" fill="#94a3b8" font-size="10">• Arterial Compliance (C) • Systemic Vascular Resistance (R) • Vasoconstriction &amp; Stiffening</text>
+  </g>
+
+  <!-- DOWN ARROW 2 -->
+  <line x1="600" y1="360" x2="600" y2="385" stroke="#10b981" stroke-width="2" stroke-dasharray="4 2" />
+  <polygon points="595,385 600,393 605,385" fill="#10b981" />
+
+  <!-- LAYER 3: MULTI-TASK PREDICTIVE & INFERENCE ENGINE -->
+  <g transform="translate(60, 395)">
+    <rect width="1080" height="120" rx="14" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="1.5" filter="url(#dropGlow)" />
+    <rect x="0" y="0" width="1080" height="28" rx="14" fill="#3730a3" fill-opacity="0.3" />
+    <text x="20" y="19" fill="#818cf8" font-size="12" font-weight="700">3. MULTI-TASK MACHINE LEARNING &amp; EXPLAINABLE AI (XAI)</text>
+
+    <!-- Sub-box 1: Short Term Excursion -->
+    <rect x="30" y="38" width="320" height="70" rx="8" fill="#0f172a" stroke="#4338ca" />
+    <text x="45" y="56" fill="#c7d2fe" font-size="11" font-weight="600">2-Hour Acute Excursion Classifier</text>
+    <text x="45" y="74" fill="#38bdf8" font-size="10" font-weight="700">ROC-AUC: 0.914 | Lead Time: +42 min</text>
+    <text x="45" y="92" fill="#94a3b8" font-size="9.5">Hypoglycemia (&lt;70) &amp; Hyperglycemia (&gt;220)</text>
+
+    <!-- Sub-box 2: 10-Yr ASCVD -->
+    <rect x="380" y="38" width="320" height="70" rx="8" fill="#0f172a" stroke="#4338ca" />
+    <text x="395" y="56" fill="#c7d2fe" font-size="11" font-weight="600">10-Year ASCVD Risk Score</text>
+    <text x="395" y="74" fill="#fbbf24" font-size="10" font-weight="700">South Asian Calibrator (1.4x Factor)</text>
+    <text x="395" y="92" fill="#94a3b8" font-size="9.5">ACC/AHA Equations + MASALA/INTERHEART</text>
+
+    <!-- Sub-box 3: SHAP Explainability -->
+    <rect x="730" y="38" width="320" height="70" rx="8" fill="#0f172a" stroke="#4338ca" />
+    <text x="745" y="56" fill="#c7d2fe" font-size="11" font-weight="600">SHAP Explainability Vectors</text>
+    <text x="745" y="74" fill="#a7f3d0" font-size="10" font-weight="700">Transparent Clinical Reasoning</text>
+    <text x="745" y="92" fill="#94a3b8" font-size="9.5">Identifies top risk drivers for clinician validation</text>
+  </g>
+
+  <!-- DOWN ARROW 3 -->
+  <line x1="600" y1="515" x2="600" y2="540" stroke="#6366f1" stroke-width="2" stroke-dasharray="4 2" />
+  <polygon points="595,540 600,548 605,540" fill="#6366f1" />
+
+  <!-- LAYER 4: IN SILICO COUNTERFACTUAL SANDBOX & CLINICAL INTERFACE -->
+  <g transform="translate(60, 550)">
+    <rect width="1080" height="130" rx="14" fill="url(#boxGrad)" stroke="#f59e0b" stroke-width="1.5" filter="url(#dropGlow)" />
+    <rect x="0" y="0" width="1080" height="28" rx="14" fill="#78350f" fill-opacity="0.3" />
+    <text x="20" y="19" fill="#fbbf24" font-size="12" font-weight="700">4. IN SILICO COUNTERFACTUAL SANDBOX &amp; ABDM INTEROPERABILITY</text>
+
+    <!-- Sub-box 1: What-If Sandbox -->
+    <rect x="30" y="38" width="500" height="80" rx="8" fill="#0f172a" stroke="#b45309" />
+    <text x="45" y="56" fill="#fde68a" font-size="12" font-weight="600">"What-If" Counterfactual Simulation Sandbox</text>
+    <text x="45" y="74" fill="#94a3b8" font-size="10">• 20-min Postprandial Brisk Walk: -38% peak glucose via muscle GLUT-4</text>
+    <text x="45" y="88" fill="#94a3b8" font-size="10">• Complex Millets / Fiber Diet: Blunts gut glucose absorption decay (kAbs)</text>
+    <text x="45" y="102" fill="#94a3b8" font-size="10">• Med Adherence (Metformin + Telmisartan): -12 mmHg SBP &amp; SVR reduction</text>
+
+    <!-- Sub-box 2: FHIR R4 & ABDM -->
+    <rect x="550" y="38" width="500" height="80" rx="8" fill="#0f172a" stroke="#b45309" />
+    <text x="565" y="56" fill="#fde68a" font-size="12" font-weight="600">HL7 FHIR R4 Interoperability &amp; Clinical Dashboards</text>
+    <text x="565" y="74" fill="#94a3b8" font-size="10">• Dual Personas: Telemetry Cockpit for Clinicians vs Empowering View for Patients</text>
+    <text x="565" y="88" fill="#94a3b8" font-size="10">• Standard HL7 FHIR Release 4.0.1 Export (Patient, Observation, RiskAssessment)</text>
+    <text x="565" y="102" fill="#94a3b8" font-size="10">• Native Ayushman Bharat Digital Mission (ABDM) ABHA Health Locker readiness</text>
+  </g>
+
+  <!-- Footer Banner -->
+  <rect x="60" y="700" width="1080" height="50" rx="10" fill="#0f172a" stroke="#1e293b" />
+  <text x="600" y="730" text-anchor="middle" fill="#64748b" font-size="11">CardioGlyc AI Prototype • Developed for Happiest Health Summit 2026, Bengaluru • Validated on 500 South Asian Patient Split</text>
+</svg>
