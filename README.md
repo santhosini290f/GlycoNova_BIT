@@ -23,7 +23,7 @@
 * **Team Leader**:SANTHOSINI A
   * **Name**: Santhosini
   * **Email**:santhosinia.ec24@bitsathy.ac.in
-  * **Phone**: 9345463596
+  * **Phone**: 8056364506
 * **Team Members**:
   * **Member 1**: SANTHOSINI A — Technical Lead & Full-Stack Architect
   * **Member 2**: SUJITHA C B — AI/ML & Physiological Modeling Lead
