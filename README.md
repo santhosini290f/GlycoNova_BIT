@@ -19,7 +19,7 @@
 ## 👥 1. Team Details and College/Incubator Information
 
 * **Team Name**: GlycoNova
-* **College / Institution / Incubator**: BIT
+* **College : BANNARI AMMAN INSTITUTE OF TECHNOLOGY
 * **Team Leader**:SANTHOSINI A
   * **Name**: Santhosini
   * **Email**:santhosinia.ec24@bitsathy.ac.in
