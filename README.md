@@ -20,15 +20,15 @@
 
 * **Team Name**: GlycoNova
 * **College / Institution / Incubator**: BIT
-* **Team Leader**:
+* **Team Leader**:SANTHOSINI A
   * **Name**: Santhosini
-  * **Email**: `[Leader Email Address]`
+  * **Email**:santhosinia.ec24@bitsathy.ac.in
   * **Phone**: `[Leader Phone Number]`
 * **Team Members**:
-  * **Member 1**: `[Full Name]` — Technical Lead & Full-Stack Architect
-  * **Member 2**: `[Full Name]` — AI/ML & Physiological Modeling Lead
-  * **Member 3**: `[Full Name]` — Clinical Informatics & Healthcare Data Lead
-  * **Member 4**: `[Full Name]` — UI/UX & Interoperability Engineer
+  * **Member 1**: SANTHOSINI A — Technical Lead & Full-Stack Architect
+  * **Member 2**: SUJITHA C B — AI/ML & Physiological Modeling Lead
+  * **Member 3**: MEGANTHIYA V — Clinical Informatics & Healthcare Data Lead
+  
 
 ---
 
